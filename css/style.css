@@ -1,0 +1,23 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pfp {
+    display: flex;
+    justify-content: center;
+    height: 75vw;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: hotpink;
+}
+
+#pfp img {
+    object-fit: cover;
+}
+
+/* #outside-links {
+    display: flex;
+    flex-wrap: wrap;
+} */
