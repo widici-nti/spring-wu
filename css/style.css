@@ -1,3 +1,9 @@
+:root {
+    --text-color: black;
+    --accent-color: hotpink;
+    --default-padding: 1rem;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -10,14 +16,45 @@ main {
     height: 75vw;
     overflow: hidden;
     border-radius: 50%;
-    background-color: hotpink;
+    background-color: var(--accent-color);
 }
 
 #pfp img {
     object-fit: cover;
 }
 
-/* #outside-links {
+#outside-links {
     display: flex;
     flex-wrap: wrap;
-} */
+    width: 100%;
+    justify-content: space-around;
+}
+
+#outside-links a div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 40vw;
+    background-color: white;
+    padding: var(--default-padding)
+}
+
+#outside-links a div img {
+    width: 20%;
+    height: 100%;
+}
+
+/* Add accent color? */
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+figcaption,
+a {
+    color: var(--text-color)
+}
