@@ -1,13 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
-    --text-color: black;
+    --dark-text-color: black;
+    --light-text-color: #eff1f5;
     --accent-color: hotpink;
     --default-padding: 1rem;
+    --default-radius: 0.5rem;
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: var(--default-padding);
 }
 
 #pfp {
@@ -24,23 +29,27 @@ main {
 }
 
 #outside-links {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 1rem;
 }
 
-#outside-links a div {
+nav-unit h3 {
+    color: var(--light-text-color);
+    font-size: x-large;
+}
+
+nav-unit div {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    width: 40vw;
-    background-color: white;
-    padding: var(--default-padding)
+    background-color: var(--nav-unit-color);
+    padding: var(--default-padding);
+    border-radius: var(--default-radius);
 }
 
-#outside-links a div img {
+nav-unit div img {
     width: 20%;
     height: 100%;
 }
@@ -56,5 +65,6 @@ h3,
 h4,
 figcaption,
 a {
-    color: var(--text-color)
+    font-family: "IBM Plex Mono", monospace;
+    color: var(--dark-text-color)
 }
