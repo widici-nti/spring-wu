@@ -18,7 +18,7 @@ main {
 #pfp {
     display: flex;
     justify-content: center;
-    height: 75vw;
+    height: 50%;
     overflow: hidden;
     border-radius: 50%;
     background-color: var(--accent-color);
