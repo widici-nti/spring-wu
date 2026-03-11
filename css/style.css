@@ -8,7 +8,7 @@
     --default-radius: 0.5rem;
 }
 
-main {
+section {
     display: flex;
     flex-direction: column;
     align-items: center;
