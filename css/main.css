@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --dark-text-color: black;
+    --light-text-color: #eff1f5;
+    --accent-color: hotpink;
+    --default-padding: 1rem;
+    --default-radius: 0.5rem;
+}
+
+/* Add accent color? */
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+figcaption,
+a {
+    font-family: "IBM Plex Mono", monospace;
+    color: var(--dark-text-color)
+}

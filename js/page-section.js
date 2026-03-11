@@ -5,6 +5,9 @@ class PageSection extends HTMLElement {
         fetch(file)
             .then(res => res.text())
             .then(html => this.innerHTML = html);
+
+        const id = file.split("/").pop().split(".")[0];
+        this.setAttribute("id", id);
     }
 }
 
