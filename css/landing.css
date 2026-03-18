@@ -8,7 +8,7 @@ page-section#landing {
 #pfp {
     display: flex;
     justify-content: center;
-    height: 50%;
+    height: 75vw;
     overflow: hidden;
     border-radius: 50%;
     background-color: var(--accent-color);

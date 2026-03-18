@@ -8,18 +8,18 @@ class NavUnit extends HTMLElement {
         const color = this.getAttribute("color") || "var(--accent-color)";
 
         this.innerHTML = `
-            <div id="github" style="--nav-unit-color: ${color}">
+            <div style="--nav-unit-color: ${color}">
                 ${img}
                 <h3>${text}</h3>
             </div>
-        `
+        `;
 
         if (url !== "") {
             this.innerHTML = `
                 <a href="${url}">
                     ${this.innerHTML}
                 </a>
-            `
+            `;
         }
     }
 }
