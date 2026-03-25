@@ -1,11 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --dark-text-color: black;
-    --light-text-color: #eff1f5;
+    --text-color: black;
+    --base-color: #eff1f5;
+    --mantle-color: #e6e9ef;
+    --crust-color: #dce0e8;
     --accent-color: hotpink;
     --default-padding: 1rem;
     --default-radius: 0.5rem;
+    --default-gap: 1rem;
+}
+
+body {
+    margin: 0;
+    padding: var(--default-padding);
+    background-color: var(--base-color);
 }
 
 /* Add accent color? */
@@ -21,5 +30,9 @@ h4,
 figcaption,
 a {
     font-family: "IBM Plex Mono", monospace;
-    color: var(--dark-text-color)
+    color: var(--text-color)
+}
+
+h3 {
+    font-size: x-large;
 }

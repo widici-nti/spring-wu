@@ -2,7 +2,6 @@ page-section#landing {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: var(--default-padding);
 }
 
 #pfp {
@@ -21,11 +20,11 @@ page-section#landing {
 #outside-links {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    gap: 1rem;
+    gap: var(--default-gap);
 }
 
 nav-unit h3 {
-    color: var(--light-text-color);
+    color: var(--base-color);
     font-size: x-large;
 }
 
