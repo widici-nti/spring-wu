@@ -2,6 +2,7 @@ page-section#projects {
     display: flex;
     flex-direction: column;
     align-items: center;
+    --img-width: 1.5rem;
 }
 
 #project-cards {
@@ -12,32 +13,49 @@ page-section#projects {
 
 project-unit {
     display: block;
-    background-color: var(--accent-color);
+    background-color: var(--mantle-color);
     padding: var(--default-padding);
     border-radius: var(--default-radius);
 }
 
-#project-title {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+project-unit>* {
+    gap: calc(var(--default-gap) / 2)
 }
 
-#project-title h3,
-#project-title p {
-    color: var(--base-color)
+#project-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#project-title>*>*,
+#project-title h3 {
+    margin-block: 0;
 }
 
 #project-title a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    width: 15%;
+    gap: calc(var(--default-gap) / 2);
 }
 
-project-unit a img {
-    width: 1.5em;
+#project-title a img {
+    /* do this dynamically? */
+    width: var(--img-width);
+    height: 100%;
+}
+
+#short-desc {
+    display: flex;
+}
+
+#stack {
+    display: flex;
+    gap: var(--default-gap)
+}
+
+#stack img {
+    width: calc(var(--img-width) * 2);
     height: 100%;
 }

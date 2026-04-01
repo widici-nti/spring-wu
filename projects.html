@@ -1,8 +1,21 @@
 <h2>Projects</h2>
 
 <section id="project-cards">
-    <project-unit url="https://github.com/widici/lapis" title="Lapis"
-        short="A tree-walk interpreted programming language written in Rust."
+    <project-unit title="Qbert" short="A Shrödinger-style OpenQasm 2.0 simulator"
+        long="Qbert is an ideal quantum computer simulator, with OpenQasm 2.0 parsing, an API for opaque gates, and BLAS optimization. GPU acceleration with Futhark is also in the works."
+        stack="rust, qiskit">
+    </project-unit>
+
+    <project-unit title="Phos" short="A Lisp-inspired programming language transpiling to Lua"
+        long="Phos is a small programming language that transpiles to Lua. Phos' syntax and semantics are influenced by Lisp but with some major differences, such as differentiating between expression and statements and variable mutability, which not all Lisp dialects have."
+        stack="rust, lua"></project-unit>
+
+    <project-unit title="Rango" url="https://github.com/widici/rango" short="Lisp dialect targeting BEAM bytecode"
+        long="Rango is a small compiled toy programming language targeting BEAM bytecode with a Lisp-inspired syntax, written in Gleam."
+        stack="gleam, erlang, lisp"></project-unit>
+
+    <project-unit title="Lapis" url="https://github.com/widici/lapis"
+        short="A tree-walk interpreted programming language"
         long="Lapis is a tree-walk interpreted programming language with a Rust-inspired syntax. It for example has functions, while loops, and if statements."
         stack="rust">
     </project-unit>

@@ -1,14 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --text-color: black;
+    --dark-color: black;
     --base-color: #eff1f5;
     --mantle-color: #e6e9ef;
     --crust-color: #dce0e8;
     --accent-color: hotpink;
     --default-padding: 1rem;
     --default-radius: 0.5rem;
-    --default-gap: 1rem;
+    --default-gap: var(--default-padding);
+}
+
+html,
+body {
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
 }
 
 body {
@@ -30,7 +43,7 @@ h4,
 figcaption,
 a {
     font-family: "IBM Plex Mono", monospace;
-    color: var(--text-color)
+    color: var(--dark-color);
 }
 
 h3 {
