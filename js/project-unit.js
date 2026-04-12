@@ -41,10 +41,10 @@ class ProjectUnit extends HTMLElement {
         this.removeEventListener("click", this);
     }
 
-    handleEvent(_e) {
-        this.querySelector("img.banner").classList.toggle("visible");
-        this.querySelector("p.long-desc").classList.toggle("visible");
-    }
+    // handleEvent(_e) {
+    //     this.querySelector("img.banner").classList.toggle("visible");
+    //     this.querySelector("p.long-desc").classList.toggle("visible");
+    // }
 }
 
 customElements.define("project-unit", ProjectUnit);

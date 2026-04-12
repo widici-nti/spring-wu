@@ -1,4 +1,4 @@
-page-section#landing {
+:host {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,6 +7,7 @@ page-section#landing {
 #pfp {
     display: flex;
     justify-content: center;
+    /* TODO: make this dynamic */
     height: 75vw;
     overflow: hidden;
     border-radius: 50%;
