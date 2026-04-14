@@ -12,25 +12,6 @@
     --default-gap: var(--default-padding);
 }
 
-html,
-body {
-    overflow: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
-}
-
-body {
-    margin: 0;
-    padding: var(--default-padding);
-    background-color: var(--base-color);
-}
-
 /* Add accent color? */
 a {
     text-decoration: none;
@@ -56,13 +37,21 @@ a {
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 h3 {
-    font-size: xx-large;
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+p {
+    font-size: 1rem;
 }
