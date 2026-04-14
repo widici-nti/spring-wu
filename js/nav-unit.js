@@ -8,8 +8,7 @@ class NavUnit extends HTMLElement {
         const color = this.getAttribute("color");
 
         const backgroundColor = color ? color : "var(--accent-color)";
-        const contrastColor = color ? "var(--base-color)" : "var(--base-color)";
-        const iconColor = color ? "" : "var(--base-color)";
+        const contrastColor = "var(--contrast-color)";
 
         const inner = `
             <div style="--nav-background-color: ${backgroundColor}; --nav-contrast-color: ${contrastColor}">
@@ -20,7 +19,7 @@ class NavUnit extends HTMLElement {
         this.innerHTML = url ? `<a href="${url}">${inner}</a>` : inner;
 
         if (svg) {
-            fetchSVG(svg, iconColor).then(svg => {
+            fetchSVG(svg, contrastColor).then(svg => {
                 console.log(svg);
                 this.querySelector("div").prepend(svg);
             });

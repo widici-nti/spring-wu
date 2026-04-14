@@ -40,7 +40,7 @@ project-unit>* {
     gap: calc(var(--default-gap) / 2);
 }
 
-#project-title a img {
+#project-title a svg {
     /* do this dynamically? */
     width: var(--img-width);
     height: 100%;
@@ -52,10 +52,11 @@ project-unit>* {
 
 #stack {
     display: flex;
+    align-items: center;
     gap: var(--default-gap)
 }
 
-#stack img {
+#stack svg {
     width: calc(var(--img-width) * 2);
     height: 100%;
 }

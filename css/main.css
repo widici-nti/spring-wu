@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 :root {
-    --contrast-color: #292c3c;
-    --base-color: #eff1f5;
-    --mantle-color: #e6e9ef;
-    --crust-color: #dce0e8;
+    --contrast-color: #eff1f5;
+    --base-color: #1e1e2e;
+    --mantle-color: #181825;
+    --crust-color: #11111b;
     --accent-color: #ea76cb;
     --default-padding: 1rem;
     --default-radius: 0.5rem;
@@ -42,16 +42,15 @@ h3,
 h4,
 p,
 a {
-    font-family: "IBM Plex Sans", sans-serif;
+    color: var(--contrast-color);
 }
 
-h1,
 h2,
 h3,
 h4,
 p,
 a {
-    color: var(--contrast-color);
+    font-family: "IBM Plex Sans", sans-serif;
 }
 
 h1 {

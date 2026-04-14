@@ -5,36 +5,43 @@ class ProjectUnit extends HTMLElement {
         const url = this.getAttribute("url");
         const title = this.getAttribute("title");
         const shortDesc = this.getAttribute("short");
-        const longDesc = this.getAttribute("long") || shortDesc;
-        const stack = (this.getAttribute("stack") || "").split(",").map(s => s.trim()).filter(Boolean).map(s => `<img src="img/icons/${s}.svg">`).join("\n");
+        const longDesc = this.getAttribute("long") || "";
+        const stack = this.getAttribute("stack") || "";
 
-        const stackIcons = `
-            <div id="stack">
-                ${stack}
-            </div>
-        `;
-
-        const header = url == null ? `<h3>${title}</h3>` :
-            `<a href=${url}>
-                <img src="img/icons/respository-accent.svg" alt="icon for the repository link">
-                <h3>${title}</h3>
-            </a>`
+        this.stackTools = stack.split(",").map(t => t.trim()).filter(Boolean);
 
         this.innerHTML = `
             <div id="project-title">
-                ${header}
                 <div id="short-desc">
                     <p>${shortDesc}</p>
-                    <img src="img/icons/arrow.svg" alt="downwards arrow icon for expanding the project">
                 </div>
             </div>
             <p id="long-desc">${longDesc}</p>
-            ${stackIcons}
+            <div id="stack"></div>
         `;
+
+        fetchSVG("img/icons/arrow.svg", "var(--contrast-color)").then(svg => {
+            this.querySelector("#short-desc").appendChild(svg);
+        });
+
+        const header = document.createElement(url ? "a" : "h3");
+        if (url) {
+            header.href = url;
+            fetchSVG("img/icons/repo.svg", "var(--accent-color)").then(svg => header.prepend(svg));
+            header.appendChild(document.createElement("h3")).textContent = title;
+        } else {
+            header.textContent = title;
+        }
+        this.querySelector("#project-title").prepend(header);
     }
 
-    connectedCallback() {
+    async connectedCallback() {
         this.addEventListener("click", this);
+
+        for (const tool of this.stackTools) {
+            const svg = await fetchSVG(`img/icons/${tool}.svg`);
+            this.querySelector("#stack").appendChild(svg);
+        }
     }
 
     disconnectedCallback() {
@@ -42,8 +49,6 @@ class ProjectUnit extends HTMLElement {
     }
 
     // handleEvent(_e) {
-    //     this.querySelector("img.banner").classList.toggle("visible");
-    //     this.querySelector("p.long-desc").classList.toggle("visible");
     // }
 }
 

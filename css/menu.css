@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-#outside-links {
+nav {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     gap: var(--default-gap);
@@ -26,5 +26,5 @@ nav-unit div {
 
 nav-unit div svg {
     width: 20%;
-    height: 100%;
+    height: auto;
 }
