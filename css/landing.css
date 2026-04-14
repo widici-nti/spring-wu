@@ -2,43 +2,37 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100vw;
+}
+
+#page-title,
+#page-title>* {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#page-title>* {
+    margin: var(--default-margin);
 }
 
 #pfp {
-    display: flex;
-    justify-content: center;
-    /* TODO: make this dynamic */
-    height: 75vw;
+    width: min-content;
     overflow: hidden;
     border-radius: 50%;
-    background-color: var(--accent-color);
+    background-color: var(--mantle-color);
 }
 
 #pfp img {
     object-fit: cover;
 }
 
-#outside-links {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    gap: var(--default-gap);
+#greeting>* {
+    margin: 0;
 }
 
-nav-unit h3 {
-    color: var(--base-color);
-}
-
-nav-unit div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    background-color: var(--nav-unit-color);
-    padding: var(--default-padding);
-    border-radius: var(--default-radius);
-}
-
-nav-unit div img {
-    width: 20%;
-    height: 100%;
+#arrow {
+    width: 10%;
 }

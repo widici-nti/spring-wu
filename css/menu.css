@@ -1,0 +1,30 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#outside-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: var(--default-gap);
+}
+
+nav-unit h3 {
+    color: var(--nav-contrast-color);
+}
+
+nav-unit div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--nav-background-color);
+    padding: var(--default-padding);
+    border-radius: var(--default-radius);
+}
+
+nav-unit div svg {
+    width: 20%;
+    height: 100%;
+}

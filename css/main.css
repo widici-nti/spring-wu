@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 :root {
-    --dark-color: black;
+    --contrast-color: #292c3c;
     --base-color: #eff1f5;
     --mantle-color: #e6e9ef;
     --crust-color: #dce0e8;
-    --accent-color: hotpink;
+    --accent-color: #ea76cb;
     --default-padding: 1rem;
     --default-radius: 0.5rem;
     --default-gap: var(--default-padding);
@@ -33,17 +36,34 @@ a {
     text-decoration: none;
 }
 
-p,
 h1,
 h2,
 h3,
 h4,
-figcaption,
+p,
 a {
-    font-family: monospace;
-    color: var(--dark-color);
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+    color: var(--contrast-color);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2rem;
 }
 
 h3 {
-    font-size: x-large;
+    font-size: xx-large;
 }
