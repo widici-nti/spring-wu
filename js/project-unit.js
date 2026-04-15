@@ -20,7 +20,14 @@ class ProjectUnit extends HTMLElement {
             <div id="stack"></div>
         `;
 
-        fetchSVG("img/icons/arrow.svg", "var(--contrast-color)").then(svg => {
+        fetchSVG("img/icons/arrow-down.svg", "var(--contrast-color)").then(svg => {
+            svg.setAttribute("id", "arrow-down");
+            svg.classList.toggle("collapsed");
+            this.querySelector("#short-desc").appendChild(svg);
+        });
+
+        fetchSVG("img/icons/arrow-up.svg", "var(--contrast-color)").then(svg => {
+            svg.setAttribute("id", "arrow-up");
             this.querySelector("#short-desc").appendChild(svg);
         });
 
@@ -48,8 +55,11 @@ class ProjectUnit extends HTMLElement {
         this.removeEventListener("click", this);
     }
 
-    // handleEvent(_e) {
-    // }
+    handleEvent(_e) {
+        for (const element of ["#stack", "#long-desc", "#arrow-up", "#arrow-down"]) {
+            this.querySelector(element).classList.toggle("collapsed")
+        }
+    }
 }
 
 customElements.define("project-unit", ProjectUnit);

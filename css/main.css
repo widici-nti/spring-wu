@@ -3,10 +3,11 @@
 
 :root {
     --contrast-color: #eff1f5;
+    --secondary-contrast-color: #ccd0da;
     --base-color: #1e1e2e;
     --mantle-color: #181825;
     --crust-color: #11111b;
-    --accent-color: #ea76cb;
+    --accent-color: #6A4E8C;
     --default-padding: 1rem;
     --default-radius: 0.5rem;
     --default-gap: var(--default-padding);
@@ -20,10 +21,12 @@ a {
 h1,
 h2,
 h3,
-h4,
-p,
-a {
+h4 {
     color: var(--contrast-color);
+}
+
+p {
+    color: var(--secondary-contrast-color);
 }
 
 h2,

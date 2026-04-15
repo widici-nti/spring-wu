@@ -8,7 +8,8 @@
 #project-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
-    gap: var(--default-gap)
+    gap: var(--default-gap);
+    width: 100%;
 }
 
 project-unit {
@@ -59,4 +60,8 @@ project-unit>* {
 #stack svg {
     width: calc(var(--img-width) * 2);
     height: 100%;
+}
+
+.collapsed {
+    display: none !important;
 }
