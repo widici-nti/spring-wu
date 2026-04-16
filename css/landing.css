@@ -1,9 +1,7 @@
 :host {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    margin: calc(-1 * var(--default-padding));
+    --background-margin: calc(-1 * var(--default-padding));
+    margin-top: var(--background-margin);
+    margin-left: var(--background-margin);
     width: 100vw;
     height: 100vh;
     background-image:
@@ -14,6 +12,16 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+#site-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: var(--default-margin);
+    width: 100%;
+    height: 100%;
 }
 
 #pfp {
