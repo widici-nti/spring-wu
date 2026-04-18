@@ -36,6 +36,11 @@ span {
     color: var(--secondary-accent-color);
 }
 
+h1,
+h2 {
+    margin: var(--site-padding);
+}
+
 h2,
 h3,
 h4,
