@@ -9,21 +9,16 @@ class NavUnit extends HTMLElement {
 
         const backgroundColor = color ? color : "var(--accent-color)";
         const contrastColor = "var(--contrast-color)";
+        const svgIcon = svg ? `<svg-icon name="${svg}" color="${contrastColor}"></svg-icon>` : "";
 
         const inner = `
             <div style="--nav-background-color: ${backgroundColor}; --nav-contrast-color: ${contrastColor}">
+                ${svgIcon}
                 <h3>${text}</h3>
             </div>
         `;
 
         this.innerHTML = url ? `<a href="${url}">${inner}</a>` : inner;
-
-        if (svg) {
-            fetchSVG(svg, contrastColor).then(svg => {
-                console.log(svg);
-                this.querySelector("div").prepend(svg);
-            });
-        }
     }
 }
 

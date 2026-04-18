@@ -24,7 +24,7 @@ nav-unit div {
     border-radius: var(--default-radius);
 }
 
-nav-unit div svg {
+nav-unit div svg-icon {
     width: 20%;
     height: auto;
 }

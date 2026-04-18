@@ -52,7 +52,6 @@ h2 {
 }
 
 #arrow {
-    /* TODO: make this more dynamic */
     width: clamp(1rem, 12vw, 6rem);
 }
 

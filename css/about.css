@@ -39,6 +39,7 @@ figure {
     padding: var(--default-padding);
     border-radius: var(--default-radius);
     width: max-content;
+    height: 100%;
     text-align: center;
     background-color: var(--mantle-color);
 }
