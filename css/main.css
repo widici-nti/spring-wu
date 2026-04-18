@@ -7,15 +7,12 @@
     --base-color: #1e1e2e;
     --mantle-color: #181825;
     --crust-color: #11111b;
-    --accent-color: #6A4E8C;
+    --accent-color: #a560ad;
+    --secondary-accent-color: #e698cc;
     --default-padding: 1rem;
+    --site-padding: calc(var(--default-padding) * 2);
     --default-radius: 0.5rem;
     --default-gap: var(--default-padding);
-}
-
-/* Add accent color? */
-a {
-    text-decoration: none;
 }
 
 h1,
@@ -25,15 +22,27 @@ h4 {
     color: var(--contrast-color);
 }
 
-p {
+p,
+figcaption {
     color: var(--secondary-contrast-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+span {
+    color: var(--secondary-accent-color);
 }
 
 h2,
 h3,
 h4,
 p,
-a {
+a,
+span,
+figcaption {
     font-family: "IBM Plex Sans", sans-serif;
 }
 
@@ -52,9 +61,12 @@ h3 {
 }
 
 h4 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
-p {
-    font-size: 1rem;
+p,
+figcaption,
+a,
+span {
+    font-size: 1.25rem;
 }
