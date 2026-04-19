@@ -31,6 +31,8 @@ class ProjectUnit extends HTMLElement {
         const header = document.createElement(url ? "a" : "h3");
         if (url) {
             header.href = url;
+            header.target = "_blank";
+            header.rel = "noopener noreferrer";
             header.innerHTML = `<svg-icon name="repo" color="var(--accent-color)"></svg-icon><h3>${title}</h3>`;
         } else {
             header.textContent = title;
@@ -46,7 +48,8 @@ class ProjectUnit extends HTMLElement {
         this.removeEventListener("click", this);
     }
 
-    handleEvent(_e) {
+    handleEvent(e) {
+        if (e.target.closest("a")) return;
         for (const element of ["#stack", "#long-desc", "#arrow-up", "#arrow-down"]) {
             this.querySelector(element).classList.toggle("collapsed")
         }
